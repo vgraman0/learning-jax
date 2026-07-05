@@ -222,3 +222,18 @@ __marimo__/
 xla_dump/
 /tmp/jax_trace/
 **/tensorboard_logs/
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# JAX / XLA dumps & profiler traces
+*.hlo
+xla_dump/
+/tmp/jax_trace/
+**/tensorboard_logs/
+
+# OS
+.DS_Store
