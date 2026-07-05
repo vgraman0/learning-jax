@@ -1,0 +1,40 @@
+[project]
+name = "llm-kernels"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+# Core deps — installed by default, all run on this Mac (CPU JAX).
+# Covers the whole roadmap up to the Pallas chapter: tracing, jaxprs,
+# grad/jit/vmap, lax control flow, HLO dumping, profiling.
+dependencies = [
+    "jax>=0.10.2",        # CPU jaxlib pulled in automatically on macOS
+    "numpy>=2.5.0",       # the mental baseline; strides/broadcasting
+    "einops>=0.8.2",      # tensor reshapes you'll lean on for tiling
+    "matplotlib>=3.11.0", # roofline / profiling plots
+    "jupyterlab>=4.6.0",  # for the .ipynb notebooks
+    "ipykernel>=7.3.0",   # registers the venv as a Jupyter kernel
+]
+
+[project.optional-dependencies]
+# Training-stack libs — pure Python, install anytime with:
+#   uv sync --extra training
+training = [
+    "flax>=0.10.0",   # nn modules if you build a toy transformer
+    "optax>=0.2.0",   # optimizers
+]
+
+# Profiling viewer for jax.profiler traces (Perfetto / TensorBoard):
+#   uv sync --extra profiling
+profiling = [
+    "tensorboard>=2.18.0",
+    "tensorboard-plugin-profile>=2.18.0",
+]
+
+# === HARDWARE-GATED — these will NOT install on Apple Silicon ===
+# Pallas-GPU / Triton need an NVIDIA GPU + CUDA; Pallas-TPU needs a TPU.
+# Run these on Colab (free T4 GPU / TPU) or a cloud box, NOT this Mac.
+#   GPU:  uv pip install "jax[cuda12]"   (Linux + NVIDIA only)
+#   GPU:  uv pip install triton          (Linux + NVIDIA only)
+#   TPU:  uv pip install "jax[tpu]"      (on a TPU VM)
+gpu = ["jax[cuda12]>=0.10.2", "triton>=3.0.0"]
+tpu = ["jax[tpu]>=0.10.2"]

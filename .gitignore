@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# JAX / XLA dumps & profiler traces
+*.hlo
+xla_dump/
+/tmp/jax_trace/
+**/tensorboard_logs/
