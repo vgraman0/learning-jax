@@ -22,6 +22,19 @@
 - [ ] Python ints as compile-time constants vs traced arrays
 - [x] Why control flow on traced values fails → bridges to JAX control flow
 
+## NumPy Fundamentals
+
+- [ ] [From Python to Numpy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+- [ ] [numpy-100](https://github.com/rougier/numpy-100)
+- [ ] Einsum fluency: attention, batched matmul, MoE dispatch/combine as einsums
+- [ ] Fancy indenxing, boolean masks, axis reasoning (argmax/sum/mean along axes)
+- [ ] Reimplement from scratch:
+    - [ ] softmax
+    - [ ] layernorm
+    - [ ] conv (im2col)
+    - [ ] top-k
+    - [ ] one-hot
+
 ## JAX Fundamentals
 
 **Tracing & abstract values** *(the conceptual heart)*
