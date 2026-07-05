@@ -7,12 +7,6 @@
 - [ ] The GIL: what it blocks, why it's irrelevant once work is in XLA/CUDA, but relevant for host dispatch overhead
 - [x] Memory: contiguous buffers vs lists, the buffer protocol
 
-**NumPy as the mental baseline**
-- [ ] ndarray internals: shape, strides, dtype, views vs copies — strides are THE concept that carries into kernels
-- [ ] Broadcasting rules (JAX inherits these exactly)
-- [ ] Row-major (C) layout, what "contiguous" means for memory access / coalescing
-- [ ] Vectorization: whole-array ops, not element loops
-
 **Language machinery you'll read in JAX source**
 - [x] Decorators (jit/pmap are decorators)
 - [ ] Closures & cell variables (how traced fns capture constants)
@@ -38,20 +32,20 @@
 ## JAX Fundamentals
 
 **Tracing & abstract values** *(the conceptual heart)*
-- [ ] Tracers: jit runs your fn with abstract stand-ins
+- [x] Tracers: jit runs your fn with abstract stand-ins
 - [ ] ShapedArray / abstract eval: shapes & dtypes known at trace time, values are not
-- [ ] Side effects (print) fire once at trace time
+- [x] Side effects (print) fire once at trace time
 - [ ] Concrete vs abstract: when JAX needs a real value
 
 **jaxprs — the IR you must learn to read**
-- [ ] jax.make_jaxpr() to inspect the trace
+- [x] jax.make_jaxpr() to inspect the trace
 - [ ] Anatomy: invars, eqns, primitives, outvars
 - [ ] Your primary debugging substrate
 
 **The transformation stack**
-- [ ] jit (trace → compile → cache)
+- [x] jit (trace → compile → cache)
 - [ ] grad / vjp / jvp (autodiff as a trace transform — your kernels need backward passes)
-- [ ] vmap (batching as a transform; the batching-rule idea reappears in Pallas)
+- [x] vmap (batching as a transform; the batching-rule idea reappears in Pallas)
 - [ ] Composition: jit(grad(vmap(f)))
 
 **Control flow & data layout** *(daily kernel tools)*
@@ -59,7 +53,7 @@
 - [ ] lax.cond / select / while_loop
 - [ ] lax.dynamic_slice / dynamic_update_slice (THE tiling primitives — load/store a block)
 - [ ] gather/scatter and why they're expensive
-- [ ] .at[].set() functional updates
+- [x] .at[].set() functional updates
 
 **Primitives & the extension system**
 - [ ] What a primitive is (atomic ops jaxprs are built from)
