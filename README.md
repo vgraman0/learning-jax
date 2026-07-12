@@ -18,7 +18,7 @@
 
 ## NumPy Fundamentals
 
-- [ ] [From Python to Numpy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+- [x] [From Python to Numpy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
 - [ ] [numpy-100](https://github.com/rougier/numpy-100)
 - [ ] Einsum fluency: attention, batched matmul, MoE dispatch/combine as einsums
 - [ ] Fancy indenxing, boolean masks, axis reasoning (argmax/sum/mean along axes)
