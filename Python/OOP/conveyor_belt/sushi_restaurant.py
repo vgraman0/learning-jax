@@ -11,7 +11,7 @@ class Plate:
         print("Calling Plate.__init__")
         self.item_name = item_name
         self.color = color
-        self.created = created or datetime.datetime.now()
+        self.created = created if created is not None else int(datetime.datetime.now().timestamp())
         self.max_belt_time = max_belt_time
 
     #instance method
@@ -19,10 +19,10 @@ class Plate:
         return self.PRICE_TIERS[self.color]
 
     def get_age(self):
-        return datetime.datetime.now() - self.created
+        return int(datetime.datetime.now().timestamp()) - self.created
 
     def is_too_old(self):
-        return self.get_age().total_seconds() > self.max_belt_time
+        return self.get_age() > self.max_belt_time
 
     @classmethod
     def from_ticket(cls, ticket):
