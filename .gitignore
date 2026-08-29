@@ -237,3 +237,4 @@ xla_dump/
 
 # OS
 .DS_Store
+Python/.vscode/settings.json
