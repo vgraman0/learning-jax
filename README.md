@@ -1,7 +1,7 @@
 # python-notes
 
 Notes and exercises on the Python → NumPy → JAX path toward writing kernels.
-Setup lives in [SETUP.md](SETUP.md); 
+Setup lives in [SETUP.md](SETUP.md).
 
 ## Topics covered
 
