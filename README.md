@@ -27,13 +27,6 @@ Setup lives in [SETUP.md](SETUP.md).
 ### [Scaling Book](Scaling%20Book/)
 - [Roofline](Scaling%20Book/roofline.ipynb): arithmetic intensity vs memory bandwidth, achieved FLOPs/s against batch size on TPU v5e
 
-### [asyncio](asyncio/) — ten failing drills plus a capstone
-Coroutines don't run on call · tasks vs sequential `await` · blocking calls freezing
-the loop · `TaskGroup` and orphaned siblings · cancellation as an exception ·
-lost tasks and unseen errors · races across await points · bounded concurrency
-with a queue and N workers · `async with` / `async for` · debug mode and live
-task trees. See [asyncio/README.md](asyncio/README.md).
-
 ### [OOP](OOP/)
 - [Classes and `__init__`](OOP/intro.md), instance vs class attributes, attribute lookup and shadowing ([data_attributes](OOP/data_attributes/data_attributes.md))
 - Methods: instance/class/static, dunder methods — `Stack`, `Pizza`, `FibonacciIterator`
