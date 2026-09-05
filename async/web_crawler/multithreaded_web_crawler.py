@@ -18,7 +18,7 @@ class MultithreadedWebCrawler(ConcurrentCrawler, WebCrawler):
                 done, pending = wait(pending, return_when=FIRST_COMPLETED)
                 for fut in done:
                     url = in_flight.pop(fut)
-                    links, fetch_dt = fut.result()
+                    links, fetch_dt, blocked_dt = fut.result()
 
                     for next_url in links:
                         page = self.canonicalize(next_url)
@@ -29,11 +29,14 @@ class MultithreadedWebCrawler(ConcurrentCrawler, WebCrawler):
                         pending.add(child)
                         in_flight[child] = page
 
-                    self.metrics.record_fetch(url, fetch_dt, queue=len(pending), discovered=len(seen_urls))
+                    self.metrics.record_fetch(
+                        url, fetch_dt, queue=len(pending), discovered=len(seen_urls),
+                        blocked_dt=blocked_dt,
+                    )
 
         self.metrics.print_summary(len(seen_urls))
         return list(seen_urls)
 
 
 if __name__ == "__main__":
-    print(MultithreadedWebCrawler(num_workers=64).crawl(DEFAULT_START_URL))
+    print(MultithreadedWebCrawler(num_workers=100).crawl(DEFAULT_START_URL))

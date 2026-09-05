@@ -12,7 +12,7 @@ class SyncWebCrawler(WebCrawler):
 
         while queue:
             url = queue.popleft()
-            links, fetch_dt = self.fetch_links(url)
+            links, fetch_dt, blocked_dt = self.fetch_links(url)
 
             for next_url in links:
                 page = self.canonicalize(next_url)
@@ -22,7 +22,8 @@ class SyncWebCrawler(WebCrawler):
                 queue.append(page)
 
             self.metrics.record_fetch(
-                url, fetch_dt, queue=len(queue), discovered=len(seen_urls)
+                url, fetch_dt, queue=len(queue), discovered=len(seen_urls),
+                blocked_dt=blocked_dt,
             )
 
         self.metrics.print_summary(len(seen_urls))

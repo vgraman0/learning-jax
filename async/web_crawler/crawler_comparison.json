@@ -1,0 +1,299 @@
+{
+  "start_url": "https://quotes.toscrape.com",
+  "workers": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "sync": {
+    "pages": 215,
+    "discovered": 215,
+    "wall": 182.8280974170193,
+    "fetch": 182.81254320265725,
+    "blocked": 182.63036186853424,
+    "pages_per_s": 1.175968043410738,
+    "avg_blocked_workers": 0.9989184619252803
+  },
+  "multithreaded": [
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 189.2965097092092,
+      "fetch": 189.2820135410875,
+      "blocked": 189.06078404793516,
+      "pages_per_s": 1.1357842800708562,
+      "avg_blocked_workers": 0.9987547279047239,
+      "num_workers": 1
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 93.32788350014016,
+      "fetch": 182.18923645745963,
+      "blocked": 181.99868683423847,
+      "pages_per_s": 2.3037059444263206,
+      "avg_blocked_workers": 1.9500997987805557,
+      "num_workers": 2
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 58.81140816677362,
+      "fetch": 207.49633345520124,
+      "blocked": 207.29304587561637,
+      "pages_per_s": 3.655753308785207,
+      "avg_blocked_workers": 3.5247080853392943,
+      "num_workers": 4
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 31.368195957969874,
+      "fetch": 207.38372670812532,
+      "blocked": 207.18176308460534,
+      "pages_per_s": 6.854076029366741,
+      "avg_blocked_workers": 6.604835144558756,
+      "num_workers": 8
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 17.178027625195682,
+      "fetch": 175.22385983075947,
+      "blocked": 175.03690253710374,
+      "pages_per_s": 12.515988720652139,
+      "avg_blocked_workers": 10.189580920243154,
+      "num_workers": 16
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 12.608238791115582,
+      "fetch": 177.82781367050484,
+      "blocked": 177.65081642195582,
+      "pages_per_s": 17.052342009218616,
+      "avg_blocked_workers": 14.09005804578652,
+      "num_workers": 32
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 10.906635709106922,
+      "fetch": 181.43972854316235,
+      "blocked": 181.29937528492883,
+      "pages_per_s": 19.712769889295682,
+      "avg_blocked_workers": 16.62285053983657,
+      "num_workers": 64
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 10.299879374913871,
+      "fetch": 178.02127020433545,
+      "blocked": 177.87148874020204,
+      "pages_per_s": 20.874030867162254,
+      "avg_blocked_workers": 17.269278820237584,
+      "num_workers": 128
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 10.192598833236843,
+      "fetch": 183.55809078505263,
+      "blocked": 183.4045270406641,
+      "pages_per_s": 21.093737084884648,
+      "avg_blocked_workers": 17.99389243522505,
+      "num_workers": 256
+    }
+  ],
+  "async": [
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 62.19596958393231,
+      "fetch": 62.17594425100833,
+      "blocked": 0.0,
+      "pages_per_s": 3.4568156335252795,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 1
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 32.887278208043426,
+      "fetch": 64.10867775138468,
+      "blocked": 0.0,
+      "pages_per_s": 6.537482324925759,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 2
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 17.23595133284107,
+      "fetch": 62.55641525471583,
+      "blocked": 0.0,
+      "pages_per_s": 12.473927075341813,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 4
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 10.18686508294195,
+      "fetch": 65.5709624895826,
+      "blocked": 0.0,
+      "pages_per_s": 21.10560984654843,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 8
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 6.634719624649733,
+      "fetch": 70.470872214064,
+      "blocked": 0.0,
+      "pages_per_s": 32.40528796442555,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 16
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.979709832929075,
+      "fetch": 78.58407620480284,
+      "blocked": 0.0,
+      "pages_per_s": 43.175206430358735,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 32
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.298480332829058,
+      "fetch": 93.99936170410365,
+      "blocked": 0.0,
+      "pages_per_s": 50.01767679567283,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 64
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.07627937477082,
+      "fetch": 109.55041937390342,
+      "blocked": 0.0,
+      "pages_per_s": 52.74417679285976,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 128
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.132533916272223,
+      "fetch": 111.12614908721298,
+      "blocked": 0.0,
+      "pages_per_s": 52.026191280225966,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 256
+    }
+  ],
+  "async_uvloop": [
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 59.53762433398515,
+      "fetch": 59.51415782654658,
+      "blocked": 0.0,
+      "pages_per_s": 3.6111618897308624,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 1
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 30.35797437513247,
+      "fetch": 58.97742100385949,
+      "blocked": 0.0,
+      "pages_per_s": 7.082158952479905,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 2
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 16.614779707975686,
+      "fetch": 60.60351279005408,
+      "blocked": 0.0,
+      "pages_per_s": 12.940285924874006,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 4
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 9.576597124803811,
+      "fetch": 61.59348275093362,
+      "blocked": 0.0,
+      "pages_per_s": 22.45056330532486,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 8
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 6.331261083949357,
+      "fetch": 66.31719496194273,
+      "blocked": 0.0,
+      "pages_per_s": 33.95847954289161,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 16
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.723265999928117,
+      "fetch": 75.24825638858601,
+      "blocked": 0.0,
+      "pages_per_s": 45.519350382398976,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 32
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.08114391611889,
+      "fetch": 88.64329955121502,
+      "blocked": 0.0,
+      "pages_per_s": 52.68130808885121,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 64
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 4.511178208980709,
+      "fetch": 110.96292912773788,
+      "blocked": 0.0,
+      "pages_per_s": 47.659389640600956,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 128
+    },
+    {
+      "pages": 215,
+      "discovered": 215,
+      "wall": 3.8959089159034193,
+      "fetch": 108.24323209095746,
+      "blocked": 0.0,
+      "pages_per_s": 55.186095116944955,
+      "avg_blocked_workers": 0.0,
+      "num_workers": 256
+    }
+  ]
+}

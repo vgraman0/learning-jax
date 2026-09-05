@@ -119,3 +119,7 @@ The corpus no longer fits on one machine. Sketch a multi-worker system. You are 
 - Worker crash, at-least-once delivery, duplicate fetches.
 - A few huge hosts vs many small ones.
 - Recrawl / freshness / priority.
+
+---
+
+Measured wall / fetch / blocked times for the three implementations: [crawler_comparison.md](crawler_comparison.md).
