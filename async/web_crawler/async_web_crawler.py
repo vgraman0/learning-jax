@@ -5,13 +5,15 @@ from asyncio import FIRST_COMPLETED
 import aiohttp
 
 from crawler import ConcurrentCrawler, DEFAULT_START_URL, WebCrawler
+from rate_limiter import RateLimiter
 from utils import links_from_html
 
 
 class AsyncWebCrawler(ConcurrentCrawler, WebCrawler):
-    def __init__(self, num_workers: int = 8, *, use_uvloop: bool = False) -> None:
+    def __init__(self, num_workers: int = 8, rps=30, use_uvloop: bool = False) -> None:
         super().__init__(num_workers)
         self._use_uvloop = use_uvloop
+        self.limiter = RateLimiter(rps)
 
     def crawl(self, start_url: str) -> list[str]:
         if self._use_uvloop:
@@ -46,7 +48,9 @@ class AsyncWebCrawler(ConcurrentCrawler, WebCrawler):
 
             async def bounded_fetch(_url: str):
                 async with sem:
-                    return await self._fetch_links(session, _url)
+                    blocked_dt = await self.limiter.acquire()
+                    links, fetch_dt, _ = await self._fetch_links(session, _url)
+                    return links, fetch_dt, blocked_dt
 
             task = asyncio.create_task(bounded_fetch(start_url))
             pending = {task}
@@ -77,4 +81,4 @@ class AsyncWebCrawler(ConcurrentCrawler, WebCrawler):
 
 
 if __name__ == "__main__":
-    print(AsyncWebCrawler(num_workers=100).crawl(DEFAULT_START_URL))
+    print(AsyncWebCrawler(num_workers=30).crawl(DEFAULT_START_URL))
